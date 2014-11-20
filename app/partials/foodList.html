@@ -1,0 +1,59 @@
+
+<section class="row-fluid">  
+ <form class="span8">
+ 	<div class="container-fluid">
+ 		<ul>
+            <h1>FIFA </h1>    <img src="img/soccer.png">
+	
+             
+ 		</ul>
+ 		 	
+     <li>
+	     Total:   <span>{{total()|currency}}</span>	
+   	 </li>
+   </ul>
+ 		
+ 	</div>
+ 	
+    <ul>   
+    	
+	   	<li  ng-repeat="food in foodList" >
+	        
+	        
+		        <a href="#/foodListView/{{foodList.indexOf(food)}}">        
+		          <img ng-src="img/{{food.shortname}}.jpeg"> 
+		        </a>
+		        <div>
+			       <ul>
+				        <li  class="artistinfo"   ng-click='toggleActive(food)' ng-class='{active:food.active}'>
+				              	 {{food.shortname}} <span>{{food.price|currency}} </span>
+				        </li>
+				        
+                       
+		                
+		                
+					<!--     <button  ng-show='food.active'  ng-repeat='label in food.matchs' class="btn btn-success" > 
+					     	
+					     		
+					     		
+					     	&loz; {{label}} &loz; </button> -->
+					     	
+					        
+			       </ul> 
+			    </div>   
+	    </li>
+   </ul>
+   
+   <ul>
+   	
+     <li>
+	     Total:   <span>{{total()|currency}}</span>	
+   	 </li>
+   </ul>
+   
+ </form> 
+ 
+</section> 
+	
+  
+   
